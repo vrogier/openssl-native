@@ -183,3 +183,4 @@ testlog.manifest
 *.db-shm
 *.db-wal
 /nuget/tests/packages/*
+*.v2
