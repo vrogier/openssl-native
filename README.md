@@ -35,7 +35,7 @@ Update the submodule to the desired version:
 
 ```
 cd openssl
-git checkout $(OpenSSL_Bersion_Tag)
+git checkout $(OpenSSL_Version_Tag)
 ```
 ### Create the nuget
 
