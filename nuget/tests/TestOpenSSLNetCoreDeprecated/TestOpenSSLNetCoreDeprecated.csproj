@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="openssl-native" Version="1.2.0" />
+    <PackageReference Include="openssl-native" Version="3.0.8" />
   </ItemGroup>
 
 </Project>

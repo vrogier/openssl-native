@@ -2,9 +2,9 @@
 
 Home of the openssl-native nuget - Build scripts and tools to create OpenSSL binary distributions
 
-Current Referenced openssl version is **1.1.1t LTS**
+Current Referenced openssl version is **3.0.8 LTS**
 
-Current Referenced openssl-native nuget version is **1.2.0**
+Current Referenced openssl-native nuget version is **3.0.8**
 
 ## Build Environment
 
@@ -35,7 +35,7 @@ Update the submodule to the desired version:
 
 ```
 cd openssl
-git checkout $(OpenSSL_Bersion_Tag)
+git checkout $(OpenSSL_Version_Tag)
 ```
 ### Create the nuget
 

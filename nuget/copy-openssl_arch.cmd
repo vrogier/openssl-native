@@ -23,11 +23,11 @@ xcopy /y %SRC_DIR%\libssl.lib %DST_DIR%\lib\%PLATEFORM%\native\
 
 REM DYNAMIC LIBS
 
-xcopy /y %SRC_DIR%\libcrypto-1_1%POSTFIX%.dll %DST_DIR%\runtimes\%PLATEFORM%\native\
-xcopy /y %SRC_DIR%\libcrypto-1_1%POSTFIX%.pdb %DST_DIR%\runtimes\%PLATEFORM%\native\
+xcopy /y %SRC_DIR%\libcrypto-3%POSTFIX%.dll %DST_DIR%\runtimes\%PLATEFORM%\native\
+xcopy /y %SRC_DIR%\libcrypto-3%POSTFIX%.pdb %DST_DIR%\runtimes\%PLATEFORM%\native\
 
-xcopy /y %SRC_DIR%\libssl-1_1%POSTFIX%.dll %DST_DIR%\runtimes\%PLATEFORM%\native\
-xcopy /y %SRC_DIR%\libssl-1_1%POSTFIX%.pdb %DST_DIR%\runtimes\%PLATEFORM%\native\
+xcopy /y %SRC_DIR%\libssl-3%POSTFIX%.dll %DST_DIR%\runtimes\%PLATEFORM%\native\
+xcopy /y %SRC_DIR%\libssl-3%POSTFIX%.pdb %DST_DIR%\runtimes\%PLATEFORM%\native\
 
 REM OPENSSL EXECUTABLE
 

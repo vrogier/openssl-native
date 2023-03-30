@@ -5,7 +5,7 @@ namespace TestOpenSSLNetCore
 {
     internal class Program
     {
-        [DllImport("libssl-1_1-x64.dll", CallingConvention = CallingConvention.Cdecl)]
+        [DllImport("libssl-3-x64.dll", CallingConvention = CallingConvention.Cdecl)]
         internal static extern IntPtr TLS_server_method();
 
         static void Main(string[] args)

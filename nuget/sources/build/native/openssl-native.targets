@@ -2,19 +2,19 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
   <Target Name="OpenSSL_x86" BeforeTargets="PostBuildEvent;PrepareForRun" Condition="'$(PlatformTarget)' == 'x86' AND '$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
     <ItemGroup>
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-1_1.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-1_1.pdb" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-1_1.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-1_1.pdb" />  
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-3.dll" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-3.pdb" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-3.dll" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-3.pdb" />  
     </ItemGroup>
     <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(OutDir)" />
   </Target>
   <Target Name="OpenSSL_x64" BeforeTargets="PostBuildEvent;PrepareForRun" Condition="'$(PlatformTarget)' == 'x64' AND '$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
     <ItemGroup>
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-1_1-x64.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-1_1-x64.pdb" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-1_1-x64.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-1_1-x64.pdb" />  
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-3-x64.dll" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-3-x64.pdb" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-3-x64.dll" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-3-x64.pdb" />  
     </ItemGroup>
     <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(OutDir)" />
   </Target>

@@ -1,6 +1,6 @@
 ## About
 
-This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 1.1.1t.
+This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 3.0.8.
 
 It can be used in C/C++ projects but also in .Net projects (.NET Framework 2-4, .NET core 2-3, .NET 5+).
 
@@ -12,12 +12,14 @@ It ships OpenSSL components (targeting both x86 and x64 architectures) :
 
 These libraries have no external runtime dependencies (except OS libraries) as they statically link against the MS C runtime (vc143).
 
-It has been built from the [OpenSSL 1.1.1t sources](https://github.com/openssl/openssl/releases/tag/OpenSSL_1_1_1t) using the following environment:
+It has been built from the [OpenSSL 3.0.8 sources](https://github.com/openssl/openssl/releases/tag/openssl-3.0.8) using the following environment:
 - Windows 11 22H2 (build 22621.1105)
-- Visual Stutdio 2022 17.4.4
+- Visual Stutdio 2022 17.5.1
 - NASM 2.16.01
 - Strawberry Perl 5.32.1.1
 - Perl module Text::Template 1.61
+
+Build scripts are located in the GIT repository [openssl-native](https://github.com/vrogier/openssl-native)
 
 ## C/C++ projects
 
@@ -81,8 +83,8 @@ It is located in the nuget package folder under '\bin\\[win-x86|win-x64]\native'
 
 ## License
 
-OpenSSL version 1.1.1t is licensed under the open source [dual OpenSSL and SSLeay license](https://https://github.com/openssl/openssl/blob/OpenSSL_1_1_1s/LICENSE).
-A local copy of the licence (license-openssl-ssleay.txt) can be found in the nuget package folder '/docs'
+OpenSSL version 3.0.8 is licensed under the open source [Apache License 2.0](https://github.com/openssl/openssl/blob/openssl-3.0/LICENSE.txt).
+A local copy of the licence (license.txt) can be found in the nuget package folder '/docs'
 
 
 

@@ -45,12 +45,12 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition ="('$(IsLegacyNetVersion)'=='TRUE')">
-		<None Include="$(MSBuildThisFileDirectory)..\runtimes\win-$(OpenSSLPlatform)\native\libcrypto-1_1$(OpenSSLPlatformFilePostfix).dll">
-			<Link>libcrypto-1_1$(OpenSSLPlatformFilePostfix).dll</Link>
+		<None Include="$(MSBuildThisFileDirectory)..\runtimes\win-$(OpenSSLPlatform)\native\libcrypto-3$(OpenSSLPlatformFilePostfix).dll">
+			<Link>libcrypto-3$(OpenSSLPlatformFilePostfix).dll</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None  Include="$(MSBuildThisFileDirectory)..\runtimes\win-$(OpenSSLPlatform)\native\libssl-1_1$(OpenSSLPlatformFilePostfix).dll">
-			<Link>libssl-1_1$(OpenSSLPlatformFilePostfix).dll</Link>
+		<None  Include="$(MSBuildThisFileDirectory)..\runtimes\win-$(OpenSSLPlatform)\native\libssl-3$(OpenSSLPlatformFilePostfix).dll">
+			<Link>libssl-3$(OpenSSLPlatformFilePostfix).dll</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>  
