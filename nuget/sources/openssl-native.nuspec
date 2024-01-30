@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
   <metadata minClientVersion="3.5">
     <id>openssl-native</id>
-    <version>3.0.8</version>
-    <title>OpenSSL LTS version 3.0.8 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
+    <version>3.0.13</version>
+    <title>OpenSSL LTS version 3.0.13 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
     <authors>vrogier</authors>
     <owners>vrogier</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,11 +12,11 @@
     <readme>docs\README.md</readme>
     <icon>images\icon.png</icon>
     <projectUrl>https://www.openssl.org/</projectUrl>
-    <description>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.8. No runtime dependencies. Compatible with C/C++/.Net projects</description>
-    <summary>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.8. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
-    <releaseNotes>Please refer https://github.com/openssl/openssl/releases/tag/openssl-3.0.8</releaseNotes>
+    <description>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.13. No runtime dependencies. Compatible with C/C++/.Net projects</description>
+    <summary>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.13. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
+    <releaseNotes>Please refer https://github.com/openssl/openssl/releases/tag/openssl-3.0.13</releaseNotes>
     <tags>native, crypto, ssl, openssl, x86, x64, managed, C, C++, openssl-native</tags>
-    <repository type="git" url="https://github.com/openssl/openssl.git" commit="31157bc0b46e04227b8468d3e6915e4d0332777c" />
+    <repository type="git" url="https://github.com/openssl/openssl.git" commit="85cf92f55d9e2ac5aacf92bedd33fb890b9f8b4c" />
   </metadata>
     <files>
 	

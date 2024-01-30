@@ -2,9 +2,9 @@
 
 Home of the openssl-native nuget - Build scripts and tools to create OpenSSL binary distributions
 
-Current Referenced openssl version is **3.0.8 LTS**
+Current Referenced openssl version is **3.0.13 LTS**
 
-Current Referenced openssl-native nuget version is **3.0.8**
+Current Referenced openssl-native nuget version is **3.0.13**
 
 ## Build Environment
 
