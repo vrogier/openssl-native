@@ -184,3 +184,4 @@ testlog.manifest
 *.db-wal
 /nuget/tests/packages/*
 *.v2
+/nuget/tests/.vs/TestOpenSLLNative/v17
