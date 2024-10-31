@@ -1,4 +1,5 @@
 SET ARCH=%1
+SET TOOLSET=%2
 
 if "%ARCH%" == "x86" (
 SET PLATEFORM=win-x86
@@ -15,11 +16,11 @@ SET DST_DIR=.\output
 
 REM STATIC & IMPORT LIBS
 
-xcopy /y %SRC_DIR%\libcrypto_static.lib %DST_DIR%\lib\%PLATEFORM%\native\
 xcopy /y %SRC_DIR%\libcrypto.lib %DST_DIR%\lib\%PLATEFORM%\native\
-
-xcopy /y %SRC_DIR%\libssl_static.lib %DST_DIR%\lib\%PLATEFORM%\native\
 xcopy /y %SRC_DIR%\libssl.lib %DST_DIR%\lib\%PLATEFORM%\native\
+
+copy /y %SRC_DIR%\libcrypto_static.lib %DST_DIR%\lib\%PLATEFORM%\native\libcrypto_static_%TOOLSET%.lib
+copy /y %SRC_DIR%\libssl_static.lib %DST_DIR%\lib\%PLATEFORM%\native\libssl_static_%TOOLSET%.lib
 
 REM DYNAMIC LIBS
 

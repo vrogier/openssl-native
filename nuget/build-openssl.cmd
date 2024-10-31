@@ -1,13 +1,7 @@
-
-echo "Building OPENSSL x86"
-call .\build-openssl_arch.cmd x86
-
-echo "Copying OPENSSL x86"
-call .\copy-openssl_arch.cmd x86
-
-echo "Building OPENSSL x64"
-call .\build-openssl_arch.cmd x64
-
-echo "Copying OPENSSL x64"
-call .\copy-openssl_arch.cmd x64
+call .\build-and-copy-openssl-target.cmd x86 v141
+call .\build-and-copy-openssl-target.cmd x64 v141
+call .\build-and-copy-openssl-target.cmd x86 v142
+call .\build-and-copy-openssl-target.cmd x64 v142
+call .\build-and-copy-openssl-target.cmd x86 v143
+call .\build-and-copy-openssl-target.cmd x64 v143
 
