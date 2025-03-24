@@ -185,3 +185,4 @@ testlog.manifest
 /nuget/tests/packages/*
 *.v2
 /nuget/tests/.vs/TestOpenSLLNative/v17
+/nuget/tests/.vs/TestOpenSSLNative/v17

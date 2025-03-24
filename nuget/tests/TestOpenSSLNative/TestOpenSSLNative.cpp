@@ -7,6 +7,7 @@
 
 int main(int argc, char** argv)
 {
+    printf("OpenSSL verison : %s\n", OpenSSL_version(OPENSSL_FULL_VERSION_STRING));
     SSL_CTX* ctx = NULL;
     SSL* ssl = NULL;
     STACK_OF(SSL_CIPHER)* sk = NULL;
