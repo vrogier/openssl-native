@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
   <metadata minClientVersion="3.5">
     <id>openssl-native</id>
-    <version>3.0.16</version>
-    <title>OpenSSL LTS version 3.0.16 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
+    <version>3.0.17</version>
+    <title>OpenSSL LTS version 3.0.17 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
     <authors>vrogier</authors>
     <owners>vrogier</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,14 +12,15 @@
     <readme>docs\README.md</readme>
     <icon>images\icon.png</icon>
     <projectUrl>https://www.openssl.org/</projectUrl>
-    <description>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.16. No runtime dependencies. Compatible with C/C++/.Net projects</description>
-    <summary>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.16. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
+    <description>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.17. No runtime dependencies. Compatible with C/C++/.Net projects</description>
+    <summary>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.0.17. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
     <releaseNotes>
-    - No OpenSSL update.
-    - Static libs for each supported toolsets (v141, v142, v143) are now provided.
+- OpenSSL update to 3.0.17.
+- Fixed static linkage issue with non-standard toolsets. 
+- Updated buld env : NASM (2.16.03), Visual Studio (17.14.13)
     </releaseNotes>
     <tags>native, crypto, ssl, openssl, x86, x64, managed, C, C++, openssl-native</tags>
-    <repository type="git" url="https://github.com/openssl/openssl.git" commit="fa1e5dfb142bb1c26c3c38a10aafa7a095df52e5" />
+    <repository type="git" url="https://github.com/openssl/openssl.git" commit="4d7dfa23be028f11e0f9189a7512a872c05938fa" />
   </metadata>
     <files>
 	
