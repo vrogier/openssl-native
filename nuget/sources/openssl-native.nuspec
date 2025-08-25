@@ -17,7 +17,7 @@
     <releaseNotes>
 - OpenSSL update to 3.0.17.
 - Fixed static linkage issue with non-standard toolsets. 
-- Updated buld env : NASM (2.16.03), Visual Studio (17.14.13)
+- Updated build env : NASM (2.16.03), Visual Studio (17.14.13)
     </releaseNotes>
     <tags>native, crypto, ssl, openssl, x86, x64, managed, C, C++, openssl-native</tags>
     <repository type="git" url="https://github.com/openssl/openssl.git" commit="4d7dfa23be028f11e0f9189a7512a872c05938fa" />
