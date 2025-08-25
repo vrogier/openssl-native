@@ -23,7 +23,7 @@
    </ItemDefinitionGroup>
    <ItemDefinitionGroup Condition="'$(PlatformTarget)' == 'x86' AND '$(Linkage-OpenSSL.ToLower())' == 'static'">
     <Link>
-      <AdditionalDependencies>Ws2_32.lib;libcrypto_static_$(PlatformToolset).lib;libssl_static_$(PlatformToolset).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;libcrypto_static_v$(PlatformToolsetVersion).lib;libssl_static_v$(PlatformToolsetVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\win-x86\native;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
      </Link>
@@ -36,7 +36,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(PlatformTarget)' == 'x64' AND '$(Linkage-OpenSSL.ToLower())' == 'static'">
     <Link>
-      <AdditionalDependencies>Ws2_32.lib;libcrypto_static_$(PlatformToolset).lib;libssl_static_$(PlatformToolset).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Ws2_32.lib;libcrypto_static_v$(PlatformToolsetVersion).lib;libssl_static_v$(PlatformToolsetVersion).lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\win-x64\native;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
    </Link>
