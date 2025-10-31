@@ -3,26 +3,29 @@
   <Target Name="OpenSSL_x86" BeforeTargets="PostBuildEvent;PrepareForRun" Condition="'$(PlatformTarget)' == 'x86' AND '$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
     <ItemGroup>
       <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-3.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libcrypto-3.pdb" />
       <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-3.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\libssl-3.pdb" />  
     </ItemGroup>
     <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(OutDir)" />
   </Target>
   <Target Name="OpenSSL_x64" BeforeTargets="PostBuildEvent;PrepareForRun" Condition="'$(PlatformTarget)' == 'x64' AND '$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
     <ItemGroup>
       <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-3-x64.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libcrypto-3-x64.pdb" />
       <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-3-x64.dll" />
-      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\libssl-3-x64.pdb" />  
     </ItemGroup>
     <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(OutDir)" />
   </Target>
+  <Target Name="OpenSSL_arm64" BeforeTargets="PostBuildEvent;PrepareForRun" Condition="'$(PlatformTarget)' == 'arm64' AND '$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
+    <ItemGroup>
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-arm64\native\libcrypto-3-arm64.dll" />
+      <BinFiles Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-arm64\native\libssl-3-arm64.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(BinFiles)" DestinationFolder="$(OutDir)" />
+  </Target>  
   <Target Name="OpenSSL_Clean" BeforeTargets="Clean"  Condition="'$(Linkage-OpenSSL.ToLower())' == 'dynamic'">
     <Message Text="OpenSSL_Clean target executed"/>
     <ItemGroup>
       <BinFiles Include="$(OutDir)\libcrypto*.dll" />
-      <BinFiles Include="$(OutDir)\libssl*.pdb" />
+      <BinFiles Include="$(OutDir)\libssl*.dll" />
     </ItemGroup>
     <Delete Files="@(BinFiles)" />
   </Target>

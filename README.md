@@ -1,16 +1,22 @@
 # openssl-native
 
-Home of the openssl-native nuget - Build scripts and tools to create OpenSSL binary distributions
+Home of the openssl-native nuget - Build scripts and tools to create OpenSSL x86/x64/ARM64 binary distributions for Microsoft Windows
 
-Current Referenced openssl version is **3.0.16 LTS**
+Current Referenced openssl version is **3.5.4 LTS**
 
-Current Referenced openssl-native nuget version is **3.0.16**
+Current Referenced openssl-native nuget version is **3.5.4**
 
 ## Build Environment
 
+Build machine must be x64.
+
+### Visual Studio 2022
+
+    Version 17.14.x64 with C/C++ toolsets x86, x64, ARM64
+    
 ### NASM
 
-    https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/nasm-2.16.01-installer-x64.exe	
+    https://www.nasm.us/pub/nasm/releasebuilds/2.16.03/win64/nasm-2.16.03-installer-x64.exe	
     
     add NASM folder to the PATH environment variable
 
@@ -24,7 +30,7 @@ Current Referenced openssl-native nuget version is **3.0.16**
 
 ### Nuget
 
-    The folder containing nuget.exe must be in the PATH environment variable
+    The folder containing nuget.exe must be in the PATH environment variable.
 
     
 ## How to build openssl-native Nuget
@@ -42,6 +48,7 @@ git checkout $(OpenSSL_Version_Tag)
 Run the build script:
 
 ```
+cd nuget
 build.cmd
 ```
 

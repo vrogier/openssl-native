@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
   <metadata minClientVersion="3.5">
     <id>openssl-native</id>
-    <version>3.5.3</version>
-    <title>OpenSSL LTS version 3.5.3 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
+    <version>3.5.4</version>
+    <title>OpenSSL LTS version 3.5.4 dynamic / static libraries (x86 and x64) with no runtime dependencies, compatible with C/C++/.Net projects</title>
     <authors>vrogier</authors>
     <owners>vrogier</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,13 +12,16 @@
     <readme>docs\README.md</readme>
     <icon>images\icon.png</icon>
     <projectUrl>https://www.openssl.org/</projectUrl>
-    <description>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.5.3. No runtime dependencies. Compatible with C/C++/.Net projects</description>
-    <summary>Prebuilt x86 / x64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.5.3. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
+    <description>Prebuilt x86 / x64 / ARM64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.5.4. No runtime dependencies. Compatible with C/C++/.Net projects</description>
+    <summary>Prebuilt x86 / x64 / ARM64 native dynamic / static libraries for OpenSSL (Cryptography and SSL/TLS Toolkit). Using LTS version 3.5.4. No runtime dependencies. Compatible with C/C++/.Net projects</summary>
     <releaseNotes>
-- Updated OpenSSL from 3.0.17 to 3.5.3 as version 3.5 is the new LTS.
+- Updated OpenSSL to 3.5.4
+- crypt32.lib is now automatically added to linker options
+- Added ARM64 support (dynamic libs + v142/vc143 static libs, no static vc141 lib due to msvc runtime incompatiblities) 
+- Removed PDBs from nuget
     </releaseNotes>
-    <tags>native, crypto, ssl, openssl, x86, x64, managed, C, C++, openssl-native</tags>
-    <repository type="git" url="https://github.com/openssl/openssl.git" commit="c4da9ac23de497ce039a102e6715381047899447" />
+    <tags>openssl, crypto, ssl, native, openssl-native, lts, tls, x86, x64, arm64, managed, C, C++, vc141, vc142, vc143</tags>
+    <repository type="git" url="https://github.com/openssl/openssl.git" commit="c1eeb9406b6142148f267594197d853403d10208" />
   </metadata>
     <files>
 	
@@ -35,9 +38,8 @@
  
     <!-- native binaries -->
  	<file src=".\bin\win-x86\native\*.exe" target="bin\win-x86\native" />
- 	<file src=".\bin\win-x86\native\*.pdb" target="bin\win-x86\native" />
     <file src=".\bin\win-x64\native\*.exe" target="bin\win-x64\native" />
-    <file src=".\bin\win-x64\native\*.pdb" target="bin\win-x64\native" />
+    <file src=".\bin\win-arm64\native\*.exe" target="bin\win-arm64\native" />
 	
 	<!-- native headers -->
  	<file src=".\include\openssl\*" target="include\openssl" /> 
@@ -45,13 +47,13 @@
 	<!-- native import and static libraies -->
  	<file src=".\lib\win-x86\native\*.lib" target="lib\win-x86\native" />
 	<file src=".\lib\win-x64\native\*.lib" target="lib\win-x64\native" />
+	<file src=".\lib\win-arm64\native\*.lib" target="lib\win-arm64\native" />
 
 	<!-- runtime shared libraries and pdbs -->
   
 	<file src=".\runtimes\win-x86\native\*.dll" target="runtimes\win-x86\native" />
-	<file src=".\runtimes\win-x86\native\*.pdb" target="runtimes\win-x86\native" />
     <file src=".\runtimes\win-x64\native\*.dll" target="runtimes\win-x64\native" />  	
-	<file src=".\runtimes\win-x64\native\*.pdb" target="runtimes\win-x64\native" />	
+    <file src=".\runtimes\win-arm64\native\*.dll" target="runtimes\win-arm64\native" />  	
 
   </files>
 </package>

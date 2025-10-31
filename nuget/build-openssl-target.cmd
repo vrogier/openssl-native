@@ -1,19 +1,24 @@
- SET CURRENT_DIR=%cd%
+SET CURRENT_DIR=%cd%
 SET ARCH=%1
 SET TOOLSET=%2
 SET SAVED_PATH=%PATH%
 
 if "%ARCH%" == "x86" (
-    SET VCVARS=32
+    SET VCVARS=x64_x86
     SET CONF_TARGET=VC-WIN32
 )
 
 if "%ARCH%" == "x64" (
-    SET VCVARS=64
+    SET VCVARS=x64
     SET CONF_TARGET=VC-WIN64A
 )
 
-REM toolset vesion might differ on installed toolsets
+if "%ARCH%" == "arm64" (
+    SET VCVARS=x64_arm64
+    SET CONF_TARGET=VC-WIN64-ARM
+)
+
+REM toolset vesion might differ from installed toolsets
 
 if "%TOOLSET%" == "v141" (
     SET TOOLSET_VERSION=14.16
@@ -24,28 +29,20 @@ if "%TOOLSET%" == "v142" (
 )
 
 if "%TOOLSET%" == "v143" (
-    SET TOOLSET_VERSION=14.33
+    SET TOOLSET_VERSION=14.44
 )
-
-echo "Set VS environment"
 
 cd "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\Auxiliary\\Build"
 
-call vcvars%VCVARS%.bat -vcvars_ver=%TOOLSET_VERSION%
+call vcvarsall.bat %VCVARS% -vcvars_ver=%TOOLSET_VERSION%
 
 cd %CURRENT_DIR%
 
 cd ..\openssl
 
-echo "Clean build system"
-
 nmake clean
 
-echo "Configure cmake"
-
 perl Configure %CONF_TARGET% /MT
-
-echo "Build !"
 
 nmake
 

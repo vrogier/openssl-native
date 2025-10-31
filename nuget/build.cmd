@@ -1,5 +1,5 @@
 
-echo "Init output folder"
+echo %time% =============== OpenSSL Nuget Buld Start
 
 set OUTPUT_FOLDER=.\output
 
@@ -10,8 +10,10 @@ IF EXIST "%OUTPUT_FOLDER%" (
 mkdir .\output
 xcopy /y /s /e .\sources\*.* %OUTPUT_FOLDER%
 
-echo "Build OPENSSL"
+echo %time% =============== Build OPENSSL
 call .\build-openssl.cmd
 
-echo "Create nuget"
+echo %time% =============== Create Nuget
 call .\nuget-pack.cmd
+
+echo %time% =============== OpenSSL Nuget Buld End

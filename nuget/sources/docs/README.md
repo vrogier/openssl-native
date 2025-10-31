@@ -1,10 +1,10 @@
 ## About
 
-This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 3.5.3.
+This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 3.5.4.
 
 It can be used in C/C++ projects but also in .Net projects (.NET Framework 2-4, .NET core 2-3, .NET 5+).
 
-It ships OpenSSL components (targeting both x86 and x64 architectures) : 
+It ships OpenSSL components (targeting x86, x64 and ARM64 architectures) : 
 - Dynamic libraries 
 - Static libraries 
 - PDB files
@@ -13,9 +13,9 @@ It ships OpenSSL components (targeting both x86 and x64 architectures) :
 OpenSSL executables and dynamic libraries have no external runtime dependencies (except OS libraries) as they statically link against the MS C runtime (vc143).
 Specific static libraries are provided for the following runtimes: vc141 (VS 2017), vc142 (VS 2019), vc143 (VS 2022).
 
-It has been built from the [OpenSSL 3.5.3 sources](https://github.com/openssl/openssl/releases/tag/openssl-3.5.3) using the following environment:
-- Windows 11 24H2 (build 26100.4946)
-- Visual Studio 2022 17.14.13
+It has been built from the [OpenSSL 3.5.4 sources](https://github.com/openssl/openssl/releases/tag/openssl-3.5.4) using the following environment:
+- Windows 11 24H2 (build 26100.6584)
+- Visual Studio 2022 17.14.18
 - NASM 2.16.03
 - Strawberry Perl 5.32.1.1
 - Perl module Text::Template 1.61
@@ -40,7 +40,7 @@ OpenSSL static libraries matching the targeted platform and toolsets are automat
 
 For Legacy .NET Framework projects, OpenSSL libraries matching the targeted platform are automatically copied to the projects output folder.
 
-For Legacy .NET Core and .NET5+, All OpenSSL libraries are automatically copied to projects output folder under a folder "runtimes" with a subfolder for each platforms ("win-x86", "win-x64").
+For Legacy .NET Core and .NET5+, All OpenSSL libraries are automatically copied to projects output folder under a folder "runtimes" with a subfolder for each platforms ("win-x86", "win-x64", "win-arm64").
 
 ## Package content
 ```
@@ -50,7 +50,10 @@ For Legacy .NET Core and .NET5+, All OpenSSL libraries are automatically copied 
    |   |       |--   openssl x86 executable and pdb
    |   `-- win-x64
    |       |-- native
-   |           |--   openssl x86 executable and pdb   
+   |           |--   openssl x64 executable and pdb   
+   |   `-- win-arm64
+   |       |-- native
+   |           |--   openssl ARM64 executable and pdb   
    |-- build
    |   |-- native
    |   |   |-- msbuild assets for C/C++ projects
@@ -69,24 +72,30 @@ For Legacy .NET Core and .NET5+, All OpenSSL libraries are automatically copied 
    |   `-- win-x64
    |       |-- native
    |           |-- openssl x64 static (runtimes specific) and import libraries
-   |-- runtimes
+    |   `-- win-arm64
+   |       |-- native
+   |           |-- openssl ARM64 static (runtimes specific) and import libraries
+  |-- runtimes
    |   |-- win-x86
    |   |   |-- native
    |           |- openssl x86 shared libraries and pdbs
    |   |-- win-x64
    |       |-- native
    |           |- openssl x64 shared libraries and pdbs
+   |   |-- win-arm64
+   |       |-- native
+   |           |- openssl ARM64 shared libraries and pdbs 
    
 ```
 
 ## Notes
 
 OpenSSL.exe is also included in the packages for optional utilitarian purposes. 
-It is located in the nuget package folder under '\bin\\[win-x86|win-x64]\native'.
+It is located in the nuget package folder under '\bin\\[win-x86|win-x64|win-arm64]\native'.
 
 ## License
 
-OpenSSL version 3.5.3 is licensed under the open source [Apache License 2.0](https://github.com/openssl/openssl/blob/openssl-3.0/LICENSE.txt).
+OpenSSL version 3.5.4 is licensed under the open source [Apache License 2.0](https://github.com/openssl/openssl/blob/openssl-3.0/LICENSE.txt).
 A local copy of the license (license.txt) can be found in the nuget package folder '/docs'
 
 

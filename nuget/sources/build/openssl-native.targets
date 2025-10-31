@@ -39,6 +39,10 @@
 		<OpenSSLPlatform>x64</OpenSSLPlatform>
 		<OpenSSLPlatformFilePostfix>-x64</OpenSSLPlatformFilePostfix>
 	</PropertyGroup>
+	<PropertyGroup Condition="('$(Platform)'=='arm64') AND ('$(IsLegacyNetVersion)'=='TRUE')">
+		<OpenSSLPlatform>arm64</OpenSSLPlatform>
+		<OpenSSLPlatformFilePostfix>-arm64</OpenSSLPlatformFilePostfix>
+	</PropertyGroup>
 	<PropertyGroup Condition="(('$(Platform)'=='x86') Or ('$(Platform)'=='AnyCPU')) AND ('$(IsLegacyNetVersion)'=='TRUE')">
 		<OpenSSLPlatform>x86</OpenSSLPlatform>
 		<OpenSSLPlatformFilePostfix></OpenSSLPlatformFilePostfix>
