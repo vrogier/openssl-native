@@ -2,9 +2,9 @@
 
 Home of the openssl-native nuget - Build scripts and tools to create OpenSSL x86/x64/ARM64 binary distributions for Microsoft Windows
 
-Current Referenced openssl version is **3.5.4 LTS**
+Current Referenced openssl version is **3.5.5 LTS**
 
-Current Referenced openssl-native nuget version is **3.5.4**
+Current Referenced openssl-native nuget version is **3.5.5**
 
 ## Build Environment
 

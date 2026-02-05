@@ -1,6 +1,6 @@
 ## About
 
-This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 3.5.4.
+This package is a binary distribution of [OpenSSL](https://www.openssl.org/) LTS version 3.5.5.
 
 It can be used in C/C++ projects but also in .Net projects (.NET Framework 2-4, .NET core 2-3, .NET 5+).
 
@@ -13,10 +13,10 @@ It ships OpenSSL components (targeting x86, x64 and ARM64 architectures) :
 OpenSSL executables and dynamic libraries have no external runtime dependencies (except OS libraries) as they statically link against the MS C runtime (vc143).
 Specific static libraries are provided for the following runtimes: vc141 (VS 2017), vc142 (VS 2019), vc143 (VS 2022).
 
-It has been built from the [OpenSSL 3.5.4 sources](https://github.com/openssl/openssl/releases/tag/openssl-3.5.4) using the following environment:
-- Windows 11 24H2 (build 26100.6584)
-- Visual Studio 2022 17.14.18
-- NASM 2.16.03
+It has been built from the [OpenSSL 3.5.5 sources](https://github.com/openssl/openssl/releases/tag/openssl-3.5.5) using the following environment:
+- Windows 11 24H2 (build 26100.7171)
+- Visual Studio 2022 17.14.25
+- NASM 3.01
 - Strawberry Perl 5.32.1.1
 - Perl module Text::Template 1.61
 
@@ -95,7 +95,7 @@ It is located in the nuget package folder under '\bin\\[win-x86|win-x64|win-arm6
 
 ## License
 
-OpenSSL version 3.5.4 is licensed under the open source [Apache License 2.0](https://github.com/openssl/openssl/blob/openssl-3.0/LICENSE.txt).
+OpenSSL version 3.5.5 is licensed under the open source [Apache License 2.0](https://github.com/openssl/openssl/blob/openssl-3.5.5/LICENSE.txt).
 A local copy of the license (license.txt) can be found in the nuget package folder '/docs'
 
 

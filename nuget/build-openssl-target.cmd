@@ -42,7 +42,7 @@ cd ..\openssl
 
 nmake clean
 
-perl Configure %CONF_TARGET% /MT
+perl Configure %CONF_TARGET% no-tests no-unit-test /MT 
 
 nmake
 
